@@ -8,9 +8,9 @@ When gievn a datset containing Taylor Swift song lyrics, my project generates a 
 ## **Quick Start**
 Enter the song titles you want the playlists to be based off of. Then, download the provided dataset file then press run. When the file upload box is running, upload the downloaded dataset file from your device. Once the project is finished running, go to the additional image generation file to finish generating the playlist by creating a cover image.   
 *README.md has Quick Start section that concisely explains how to run your project*
-##**Video Links**
+## **Video Links**
 README.md has Video Links section with direct links to your demo and technical walkthrough videos  
 Demo:  
 Technical Walkthrough: 
-##**Evaluation**
+## **Evaluation**
 README.md has Evaluation section that presents any quantitative results, accuracy metrics, or qualitative outcomes from testing
