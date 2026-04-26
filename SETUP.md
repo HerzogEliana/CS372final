@@ -1,5 +1,4 @@
 # SETUP
-SETUP.md exists with clear, step-by-step installation instructions
 ## Downloading data
 - download the spreadsheet linked at the top of the document
   - https://docs.google.com/spreadsheets/d/1QyAuiphFFS0CTUge2Rm8706e-NPg3lzJ/edit?usp=sharing&ouid=118325991457207812648&rtpof=true&sd=true
