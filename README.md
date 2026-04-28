@@ -28,26 +28,19 @@ The prompts are
 |---------------|-------------|--------------------------------|
 | 1     | 0.903   |         Dress has a high similarity score despite being very different lyrically from this song. It is a very flirtatious song, while this one is more similar to a song about her love being there in the chaos and wanting a calm love, which is most similar to This Love, gold rush, and sweet nothing, none of which are listed. State of grace should be the most similar, especially due to the lyric "You're my Achilles heel / This is the golden age of something good and right and real"        |
 | 2      | 0.822   |         This song is most similar to Lover, New Years Day, or Daylight, all songs about finding your person after a lot of bad relationships. Everything has Changed is correctly rated highly, due to the lines "Your eyes look like comin' home ... all I know is everything has changed" and Holy Ground is also a great choice.   |
-| 3a        | ?  |        These are great choices, especially Sweet Nothing and King of my Heart.       |
-| 3b     | 0.927      |      While this is pretty differnet from a lot of songs in the database, it is similar to a newwer song Fate of Ophelia which makes this generation interesting in a different way. The creativity of a higher temperature allowed the model to correctly generate something that feels like a song that hadn't been created yet.    |
-| 4    | 0.8765         |      3           |
+| 3a        | .900  |        These are great choices, especially Sweet Nothing and King of my Heart.       |
+| 3b     | 0.902      |      While this is pretty differnet from a lot of songs in the database, it is similar to a newwer song Fate of Ophelia which makes this generation interesting in a different way. The creativity of a higher temperature allowed the model to correctly generate something that feels like a song that hadn't been created yet.    |
+| 4    | 0.927        |      King of my Heart is a great top similarity because both are about finding love in your darkest moment and being able to ignore what everyone else thought      |
 
-Prompt 3b had the greatest similarity score and prompt 2 had the lowest.
+Prompt 4 had the greatest similarity score and prompt 2 had the lowest.
 
-- Compared multiple model architectures or approaches quantitatively with controlled experimental setup
+### Compared multiple model architectures or approaches quantitatively with controlled experimental setup
+To generate a cover image for the album, I compared multiple model architechtures. First, I used CLIP Embeddings similarity search using a dataset of album images. The results for this were the worst, bearing limited resemblance to the titles chosen. I also was not able to provide detailed guidance for image generation. I then used guided stable diffusion. While the covers weren't great, they looked like they could be real album covers for the title given even if they did not look like Taylor Swift album covers.
+For the image to image, it often failed because it looked too similar to the image prompt. For some images, it only recreated the image with slight differences where as for others there were key details of the original kept that made no sense to keep, such as the shape of the head in the lighthouse playlist cover. 
+### Performed error analysis with visualization and discussion of failure cases, including analysis of why the model fails and what types of inputs are most challenging
+The model fails when the prompt given is far from the lyrics. The similarity scores trended higher when I had the model create lyrics for "let's go (battle)", as lyrics about fighting and winning the war and breakups and also hype-up songs are common. However, when I had the model create lyrics for "Hey little songbird" the similarity was much lower because songbirds are not mentioned in very many lyrics. This results in a random seeming assortment of songs.
 
-- Performed error analysis with visualization and discussion of failure cases, including analysis of why the model fails and what types of inputs are most challenging
-discuss differnet image geneation models
-To generate a cover image for the album, I compared multiple model architechtures. First, I used CLIP Embeddings similarity search using a dataset of album images. The results for this were the worst, bearing limited resemblance to the titles chosen. I also was not able to provide detailed guidance for image generation. I then used guided stable diffusion. While the covers weren't great, they looked like they could be real album covers for the title given even if ...
-For the image to image, it failed because it looked too similar to the image prompt. It could only really recreate the given 
 ##**Video Links**
 README.md has Video Links section with direct links to your demo and technical walkthrough videos  
 Demo:  
 Technical Walkthrough: 
-## Other Notes
-- Used BERT transformer model (section labeled Playlist Generation)
-- Used 2 different temperature settings, using temperature as a parameter in calls to Gemini for lyric generation (section labeled Playlist Generation)
-- Computed Bert embeddings and conducted sentiment analysis to create a list of songs with lyrics most similar to the given prompt (section labeled Playlist Generation)
-- Made multiple calls to Gemini and conducted sentiment analysis on output and used that to generate playlist suggestions (section labeled Playlist Generation)
-- Used few-shot examples to generate more realistic song lyrics by providing song lyrics of two very different songs with example of structure of lyric output as well (section labeled Playlist Generation)
-- Used 2 different temperature settings, using temperature as a parameter in calls to Gemini for lyric generation (section labeled Playlist Generation)
