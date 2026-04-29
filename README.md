@@ -1,13 +1,13 @@
 # Read Me: Playlist Generation
 Author: Eliana Herzog  
   NetID: elh58
-
 ## **What it Does**
 The goal of this project is to create a new album of Taylor Swift songs primarily out of pre-existing songs, complete with a new album cover and title. When gievn a datset containing Taylor Swift song lyrics, my project generates a playlist of Taylor Swift songs based on a given song title and then generates a few versions of an original song based on that a title then compares which has the highest similarity score, selecting that one as the playlist to be used. It then generates a cover image for the playlist, using stable diffusion and conditioning before fine-tuning it to attempt to generate an original but realistic looking album cover.
-
 ## **Quick Start**
 Enter the song titles you want the playlists to be based off of. Then, download the provided dataset file then press run. When the file upload box is running, upload the downloaded dataset file from your device. Once the project is finished running, go to the additional image generation file to finish generating the playlist by creating a cover image.   
-
+## **Video Links**
+Demo:  https://youtu.be/fn2GZjj7X7A   
+Technical Walkthrough: https://youtu.be/38AQ_ywNTmE 
 ## **Evaluation**
 ### Evaluation of prompt designs
 The prompts are
@@ -39,6 +39,3 @@ For the image to image, it often failed because it looked too similar to the ima
 ### Error analysis
 The model fails when the prompt given is far from the lyrics. The similarity scores trended higher when I had the model create lyrics for "let's go (battle)", as lyrics about fighting and winning the war and breakups and also hype-up songs are common. However, when I had the model create lyrics for "Hey little songbird" the similarity was much lower because songbirds are not mentioned in very many lyrics. This results in a random seeming assortment of songs.
 
-## **Video Links**
-Demo:  https://youtu.be/fn2GZjj7X7A   
-Technical Walkthrough: https://youtu.be/38AQ_ywNTmE 
