@@ -41,4 +41,4 @@ The model fails when the prompt given is far from the lyrics. The similarity sco
 
 ## **Video Links**
 Demo:  https://youtu.be/fn2GZjj7X7A   
-Technical Walkthrough: 
+Technical Walkthrough: https://youtu.be/38AQ_ywNTmE 
