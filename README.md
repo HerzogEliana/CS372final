@@ -1,15 +1,14 @@
-# Read Me: Album 13 Generation
-Author: Eliana Herzog
-NetID: elh58
+# Read Me: Playlist Generation
+Author: Eliana Herzog  
+  NetID: elh58
 
 ## **What it Does**
-*README.md has What it Does section that describes in one paragraph what your project does*  
 The goal of this project is to create a new album of Taylor Swift songs primarily out of pre-existing songs, complete with a new album cover and title. When gievn a datset containing Taylor Swift song lyrics, my project generates a playlist of Taylor Swift songs based on a given song title and then generates a few versions of an original song based on that a title then compares which has the highest similarity score, selecting that one as the playlist to be used. It then generates a cover image for the playlist, using stable diffusion and conditioning before fine-tuning it to attempt to generate an original but realistic looking album cover.
+
 ## **Quick Start**
 Enter the song titles you want the playlists to be based off of. Then, download the provided dataset file then press run. When the file upload box is running, upload the downloaded dataset file from your device. Once the project is finished running, go to the additional image generation file to finish generating the playlist by creating a cover image.   
-*README.md has Quick Start section that concisely explains how to run your project*
-##**Evaluation**
-README.md has Evaluation section that presents any quantitative results, accuracy metrics, or qualitative outcomes from testing
+
+## **Evaluation**
 ### Evaluation of prompt designs
 The prompts are
 1. "Write a song in the style of Taylor Swift for the given title. "
@@ -34,13 +33,12 @@ The prompts are
 
 Prompt 4 had the greatest similarity score and prompt 2 had the lowest.
 
-### Compared multiple model architectures or approaches quantitatively with controlled experimental setup
+### Comparing multiple model architectures
 To generate a cover image for the album, I compared multiple model architechtures. First, I used CLIP Embeddings similarity search using a dataset of album images. The results for this were the worst, bearing limited resemblance to the titles chosen. I also was not able to provide detailed guidance for image generation. I then used guided stable diffusion. While the covers weren't great, they looked like they could be real album covers for the title given even if they did not look like Taylor Swift album covers.
 For the image to image, it often failed because it looked too similar to the image prompt. For some images, it only recreated the image with slight differences where as for others there were key details of the original kept that made no sense to keep, such as the shape of the head in the lighthouse playlist cover. 
-### Performed error analysis with visualization and discussion of failure cases, including analysis of why the model fails and what types of inputs are most challenging
+### Error analysis
 The model fails when the prompt given is far from the lyrics. The similarity scores trended higher when I had the model create lyrics for "let's go (battle)", as lyrics about fighting and winning the war and breakups and also hype-up songs are common. However, when I had the model create lyrics for "Hey little songbird" the similarity was much lower because songbirds are not mentioned in very many lyrics. This results in a random seeming assortment of songs.
 
-##**Video Links**
-README.md has Video Links section with direct links to your demo and technical walkthrough videos  
-Demo:  
+## **Video Links**
+Demo:  https://youtu.be/fn2GZjj7X7A   
 Technical Walkthrough: 
